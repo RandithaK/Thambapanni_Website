@@ -1,7 +1,3 @@
-import React from "react";
-
-
-
 // This should be changed as needed
 const steps = [
   { number: "01", title: "Login" },

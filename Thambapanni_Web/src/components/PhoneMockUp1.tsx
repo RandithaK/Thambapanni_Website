@@ -1,5 +1,3 @@
-import React from "react";
-
 const steps = [
   { number: "01", title: "Login" },
   { number: "02", title: "Generate your trip" },

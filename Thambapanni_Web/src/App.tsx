@@ -28,7 +28,7 @@ function App() {
         <GuideCard title="Tourist" text="Hello Visitor" image="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" link="https://www.example.com"/>
         </div>
         <div className="divider"></div>
-        <div className="card bg-base-300 rounded-box grid place-items-center">
+        <div className="card bg-base-300 rounded-box grid place-items-center" id="guides">
         <GuideCard title="Guide" text="Become a guide" image="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" link="https://www.example.com"/>
         </div>
       </div>
