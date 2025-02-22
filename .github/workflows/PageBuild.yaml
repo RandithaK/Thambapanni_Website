@@ -1,0 +1,25 @@
+name: Check Build for Page
+
+on:
+  pull_request: # Run on pull requests
+  push:
+    branches: [main] # Run on pushes to main and develop branches (adjust branches as needed)
+
+jobs:
+  Build-Test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0' # Preferred Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Build Command
+        run: npm run build
