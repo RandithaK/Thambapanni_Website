@@ -1,7 +1,6 @@
 const Hero = () => {
   return (
     <div>
-        
       <div
         className="hero min-h-screen"
         style={{
@@ -13,17 +12,20 @@ const Hero = () => {
         <div className="hero-content text-neutral-content text-center">
           <div className="max-w-xl">
             <h1 className="mb-5 text-5xl font-bold">Welcome to Sri Lanka</h1>
-            <p className="mb-5">
-                The Wonder of Asia
-            </p>
-            <button className="btn btn-primary" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
+            <p className="mb-5">The Wonder of Asia</p>
+            <button
+              className="btn btn-primary"
+              onClick={() =>
+                window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
+              }
+            >
               Your Adventure Starts Here
             </button>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

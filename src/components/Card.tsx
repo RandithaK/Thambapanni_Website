@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 interface CardProps {
   title: string;
@@ -16,7 +16,7 @@ const Card: React.FC<CardProps> = ({ title, text, image, link }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title text-2xl">{title}</h2>
-          <p className='text-lg'>{text}</p>
+          <p className="text-lg">{text}</p>
           <div className="card-actions justify-end">
             {link && (
               <a href={link}>
@@ -27,7 +27,7 @@ const Card: React.FC<CardProps> = ({ title, text, image, link }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

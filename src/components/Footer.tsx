@@ -24,10 +24,18 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="footer-title">About Us - Let's connect</h6>
-          <a className="link link-hover" href="https://www.google.com">DEV1</a>
-          <a className="link link-hover" href="https://www.google.com">DEV2</a>
-          <a className="link link-hover" href="https://www.google.com">DEV3</a>
-          <a className="link link-hover" href="https://www.google.com">DEV4</a>
+          <a className="link link-hover" href="https://www.google.com">
+            DEV1
+          </a>
+          <a className="link link-hover" href="https://www.google.com">
+            DEV2
+          </a>
+          <a className="link link-hover" href="https://www.google.com">
+            DEV3
+          </a>
+          <a className="link link-hover" href="https://www.google.com">
+            DEV4
+          </a>
         </nav>
         <nav>
           <h6 className="footer-title">Legal</h6>

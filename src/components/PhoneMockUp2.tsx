@@ -10,8 +10,6 @@ const PhoneMockUp1 = () => {
   return (
     <div>
       <div className="flex w-full flex-col lg:flex-row">
-        
-        
         <div className="card bg-base-300 rounded-box grid h-256 grow place-items-center">
           <ul className="list bg-base-100 rounded-box shadow-md">
             <li className="p-4 pb-2 text-3xl opacity-60 tracking-wide">
