@@ -16,11 +16,11 @@ function App() {
       <Hero />
       <Carousel />
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4">
         <PhoneMockUp1 />
       </div>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4">
         <PhoneMockUp2 />
       </div>
 
