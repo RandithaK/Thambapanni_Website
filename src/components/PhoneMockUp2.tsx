@@ -10,8 +10,8 @@ const PhoneMockUp2 = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex w-full flex-col gap-8 lg:flex-row lg:gap-4">
-        <div className="card bg-base-300 rounded-box flex justify-center items-center w-full lg:w-1/2 py-8">
-          <ul className="list bg-base-100 rounded-box shadow-md w-full max-w-md mx-4">
+        <div className="card rounded-box flex justify-center items-center w-full lg:w-1/2 py-8">
+          <ul className="list rounded-box shadow-md w-full max-w-md mx-4">
             <li className="p-4 pb-2 text-xl sm:text-2xl md:text-3xl opacity-60 tracking-wide">
               Explore our Features
             </li>
@@ -31,7 +31,7 @@ const PhoneMockUp2 = () => {
         
         <div className="hidden lg:flex lg:divider-horizontal"></div>
         
-        <div className="card bg-base-300 rounded-box flex justify-center items-center w-full lg:w-1/2 py-8">
+        <div className="card rounded-box flex justify-center items-center w-full lg:w-1/2 py-8">
           <div className="transform scale-75 sm:scale-90 md:scale-100">
             <div className="mockup-phone border-primary">
               <div className="mockup-phone-camera"></div>
