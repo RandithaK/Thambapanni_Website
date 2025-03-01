@@ -62,7 +62,7 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
     </div>
   );
 };
-const Mockupcontainer: React.FC = () => {
+const MockupContainer: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   // Check if the screen is mobile size
