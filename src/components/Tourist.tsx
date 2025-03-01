@@ -3,10 +3,7 @@ import Card from "./Card";
 const Tourist = () => {
   return (
     <div>
-      <div
-        className="card rounded-box grid place-items-center"
-        id="tourist"
-      >
+      <div className="card rounded-box grid place-items-center" id="tourist">
         <div className="flex flex-col lg:flex-row gap-4 p-4">
           <Card
             title="Tourist"

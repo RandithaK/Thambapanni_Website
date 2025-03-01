@@ -4,7 +4,7 @@ const Guide = () => {
   return (
     <div>
       <div
-        className="card bg-base-300 rounded-box grid place-items-center"
+        className="card rounded-box grid place-items-center"
         id="guides"
       >
         <div className="flex flex-col lg:flex-row gap-4 p-4">

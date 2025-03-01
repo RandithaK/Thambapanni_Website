@@ -28,9 +28,9 @@ const PhoneMockUp2 = () => {
             ))}
           </ul>
         </div>
-        
+
         <div className="hidden lg:flex lg:divider-horizontal"></div>
-        
+
         <div className="card rounded-box flex justify-center items-center w-full lg:w-1/2 py-8">
           <div className="transform scale-75 sm:scale-90 md:scale-100">
             <div className="mockup-phone border-primary">

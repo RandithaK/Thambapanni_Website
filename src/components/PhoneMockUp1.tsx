@@ -23,9 +23,9 @@ const PhoneMockUp1 = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="hidden lg:flex lg:divider-horizontal"></div>
-        
+
         <div className="card rounded-box flex justify-center items-center w-full lg:w-1/2 py-8">
           <ul className="list rounded-box shadow-md w-full max-w-md mx-4">
             <li className="p-4 pb-2 text-xl sm:text-2xl md:text-3xl opacity-60 tracking-wide">

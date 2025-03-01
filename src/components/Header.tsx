@@ -1,4 +1,6 @@
 import React from "react";
+import { repositories } from "../siteConfig";
+import thambapanniLogo from "../assets/Thambapanni.png";
 
 interface NavItem {
   label: string;
@@ -13,9 +15,9 @@ const navItems: NavItem[] = [
   {
     label: "Our Codebases",
     children: [
-      { label: "FrontEnd", href: "" },
-      { label: "BackEnd", href: "" },
-      { label: "WebPage", href: "" },
+      { label: "FrontEnd", href: repositories.frontend },
+      { label: "BackEnd", href: repositories.backend },
+      { label: "WebPage", href: repositories.website },
     ],
   },
 ];
@@ -30,7 +32,7 @@ const NavLinks: React.FC<{ items: NavItem[]; className?: string }> = ({
         {item.children ? (
           <details>
             <summary>{item.label}</summary>
-            <ul className="p-2">
+            <ul className="p-2 glass rounded-box">
               {item.children.map((child, childIndex) => (
                 <li key={childIndex}>
                   <a href={child.href}>{child.label}</a>
@@ -49,8 +51,18 @@ const NavLinks: React.FC<{ items: NavItem[]; className?: string }> = ({
 const Header: React.FC = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-50">
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar glass shadow-sm">
         <div className="navbar-start">
+          
+            <a className="btn btn-ghost bg-transparent text-2xl flex items-center gap-2">
+            <img
+              src={thambapanniLogo}
+              alt="Thambapanni Logo"
+              className="w-10 h-10"
+            />
+            Thambapanni
+            </a>
+
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -70,19 +82,15 @@ const Header: React.FC = () => {
             </div>
             <NavLinks
               items={navItems}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content glass rounded-box z-1 mt-3 w-52 p-2 shadow"
             />
           </div>
-          <a className="btn btn-ghost text-2xl">Thambapanni</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <NavLinks
             items={navItems}
             className="menu menu-horizontal px-1 text-lg"
           />
-        </div>
-        <div className="navbar-end">
-          <a className="btn btn-info">Download Now</a>
         </div>
       </div>
     </div>
