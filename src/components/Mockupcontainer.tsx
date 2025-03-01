@@ -1,5 +1,5 @@
 // PhoneMockups.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // Import images directly
 import image1 from '../assets/image1.jpeg';
 import image2 from '../assets/image2.jpeg';
@@ -10,20 +10,29 @@ interface PhotoCardProps {
   imageSrc: string;
   rotation: string;
   translateX: string;
+  translateXMobile: string;
   zIndex: number;
+  isMobile: boolean;
 }
 
-const PhotoCard: React.FC<PhotoCardProps> = ({ imageSrc, rotation, translateX, zIndex }) => {
+const PhotoCard: React.FC<PhotoCardProps> = ({ 
+  imageSrc, 
+  rotation, 
+  translateX, 
+  translateXMobile, 
+  zIndex, 
+  isMobile 
+}) => {
   return (
     <div 
-      className={`absolute top-1/2 transform -translate-y-1/2 ${translateX} ${rotation} transition-all duration-500`}
+      className={`absolute top-1/2 transform -translate-y-1/2 ${isMobile ? translateXMobile : translateX} ${rotation} transition-all duration-500`}
       style={{ zIndex }}
     >
       <div
         className="relative rounded-3xl overflow-hidden shadow-xl transition-all duration-300 ease-in-out hover:scale-105"
         style={{ 
-          width: '250px', 
-          height: '480px',
+          width: isMobile ? '180px' : '250px', 
+          height: isMobile ? '350px' : '480px',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4)'
         }}
       >
@@ -45,7 +54,25 @@ const PhotoCard: React.FC<PhotoCardProps> = ({ imageSrc, rotation, translateX, z
   );
 };
 
-const Phone: React.FC = () => {
+const Mockupcontainer: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if the screen is mobile size
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
   // Images 
   const images = [
     image1,
@@ -54,26 +81,30 @@ const Phone: React.FC = () => {
     image4,
   ];
 
-  // Improved spread arrangement with balanced spacing
+  // Styles for different screen sizes
   const phoneStyles = [
     { 
       rotation: '-rotate-12', 
-      translateX: '-translate-x-[300px]', 
+      translateX: '-translate-x-[300px]',
+      translateXMobile: '-translate-x-[90px]', 
       zIndex: 1 
     },
     { 
       rotation: '-rotate-6', 
-      translateX: '-translate-x-[100px]', 
+      translateX: '-translate-x-[100px]',
+      translateXMobile: '-translate-x-[30px]', 
       zIndex: 2 
     },
     { 
       rotation: 'rotate-6', 
-      translateX: 'translate-x-[100px]', 
+      translateX: 'translate-x-[100px]',
+      translateXMobile: 'translate-x-[30px]', 
       zIndex: 3 
     },
     { 
       rotation: 'rotate-12', 
-      translateX: 'translate-x-[300px]', 
+      translateX: 'translate-x-[300px]',
+      translateXMobile: 'translate-x-[90px]', 
       zIndex: 4 
     },
   ];
@@ -98,8 +129,8 @@ const Phone: React.FC = () => {
         </h2>
       </div>
 
-      {/* Phone mockups container - properly centered */}
-      <div className="relative w-full max-w-6xl h-[600px] mx-auto flex items-center justify-center  pr-60">
+      {/* Phone mockups container - properly centered and responsive */}
+      <div className={`relative w-full max-w-6xl h-[400px] md:h-[600px] mx-auto flex items-center justify-center ${isMobile ? 'pr-45' : 'pr-60'}`}>
         {/* Center point for all phones to fan out from */}
         <div className="relative">
           {images.map((src, index) => (
@@ -108,15 +139,15 @@ const Phone: React.FC = () => {
               imageSrc={src} 
               rotation={phoneStyles[index].rotation} 
               translateX={phoneStyles[index].translateX}
+              translateXMobile={phoneStyles[index].translateXMobile}
               zIndex={phoneStyles[index].zIndex}
+              isMobile={isMobile}
             />
           ))}
         </div>
       </div>
-      
-      
     </div>
   );
 };
 
-export default Phone;
+export default Mockupcontainer;
