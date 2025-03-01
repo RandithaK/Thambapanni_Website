@@ -7,7 +7,7 @@ import Hero from "./components/Hero";
 import PhoneMockUp2 from "./components/PhoneMockUp2";
 import { ShineBorder } from "./components/ShineBorder";
 import Tourist from "./components/Tourist";
-import Mockupcontainer from "./components/Mockupcontainer";
+import MockupContainer from "./components/MockupContainer";
 import BackToTopButton from "./components/BackToTopbutton";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Hero />
         
         <div className="container mx-auto ">
-          <Mockupcontainer/>
+          <MockupContainer/>
           <BackToTopButton />
         </div>
 
