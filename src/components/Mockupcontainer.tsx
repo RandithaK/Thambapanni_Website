@@ -33,8 +33,8 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
       <div
         className="relative rounded-3xl overflow-hidden shadow-xl transition-all duration-300 ease-in-out hover:scale-105"
         style={{ 
-          width: isMobile ? '180px' : '250px', 
-          height: isMobile ? '420px' : '560px',
+          width: isMobile ? '180px' : '270px', 
+          height: isMobile ? '390px' : '575px',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4)'
         }}
       >
