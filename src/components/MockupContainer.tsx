@@ -23,6 +23,8 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
   zIndex,
   isMobile,
 }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div
       className={`absolute top-1/2 transform -translate-y-1/2 ${isMobile ? translateXMobile : translateX} ${rotation} transition-all duration-500`}
@@ -30,16 +32,23 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
     >
       <div
         className="relative rounded-3xl overflow-hidden shadow-xl transition-all duration-300 ease-in-out hover:scale-105"
-        style={{
-          width: isMobile ? "180px" : "250px",
-          height: isMobile ? "350px" : "480px",
-          boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.4)",
+        style={{ 
+          width: isMobile ? '180px' : '270px', 
+          height: isMobile ? '390px' : '575px',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4)'
         }}
       >
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+            <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        )}
         <img
           src={imageSrc}
           alt="Phone screen"
           className="w-full h-full object-cover"
+          onLoad={() => setIsLoading(false)}
+          onError={() => setIsLoading(false)}
         />
         {/* Add phone frame overlay */}
         <div className="absolute inset-0 rounded-3xl border-[12px] border-white bg-transparent pointer-events-none"></div>
@@ -53,8 +62,7 @@ const PhotoCard: React.FC<PhotoCardProps> = ({
     </div>
   );
 };
-
-const MockupContainer: React.FC = () => {
+const Mockupcontainer: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   // Check if the screen is mobile size
