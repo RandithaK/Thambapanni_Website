@@ -3,10 +3,11 @@ import Footer from "./components/Footer";
 import Guide from "./components/Guide";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import PhoneMockUp1 from "./components/PhoneMockUp1";
+
 import PhoneMockUp2 from "./components/PhoneMockUp2";
 import { ShineBorder } from "./components/ShineBorder";
 import Tourist from "./components/Tourist";
+import Phone from "./components/phonemokups";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
       <ShineBorder>
         <Hero />
 
-        <div className="container mx-auto px-4">
-          <PhoneMockUp1 />
+        <div className="container mx-auto ">
+          <Phone/>
         </div>
 
         <div className="container mx-auto px-4">
