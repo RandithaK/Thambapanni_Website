@@ -121,7 +121,7 @@ const MockupContainer: React.FC = () => {
           minSize={0.6}
           maxSize={1.4}
           particleColor="#8ECAE6"
-          particleDensity={100}
+          particleDensity={150}
           speed={2}
           className="w-full h-full"
         />
@@ -152,7 +152,7 @@ const MockupContainer: React.FC = () => {
             minSize={0.6}
             maxSize={1}
             particleColor="#FFFFFF"
-            particleDensity={900}
+            particleDensity={700}
             speed={1}
             className="w-full h-full"
           />
