@@ -4,7 +4,7 @@ import image1 from "../assets/image1.jpeg";
 import image2 from "../assets/image2.jpeg";
 import image3 from "../assets/image3.jpeg";
 import image4 from "../assets/image4.jpeg";
-import { SparklesCore } from "./SparklesCore"; // Import the SparklesCore component
+import { SparklesCore } from "./SparklesCore"; 
 
 interface PhotoCardProps {
   imageSrc: string;
@@ -115,6 +115,17 @@ const MockupContainer: React.FC = () => {
 
   return (
     <div className="w-full overflow-hidden py-16 relative">
+       <div className="absolute inset-0 w-full h-full -z-20">
+        <SparklesCore
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleColor="#8ECAE6"
+          particleDensity={100}
+          speed={2}
+          className="w-full h-full"
+        />
+      </div>
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10"></div>
@@ -146,7 +157,7 @@ const MockupContainer: React.FC = () => {
             className="w-full h-full"
           />
           
-          {/* Add gradients like in the example */}
+          {/* Linear Gradient overlay */}
           <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
           <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
           <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
