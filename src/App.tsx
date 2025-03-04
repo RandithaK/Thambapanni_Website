@@ -1,15 +1,15 @@
 import "./App.css";
 import Footer from "./components/Footer";
-import Guide from "./components/Guide";
+
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 
 import AnimatedTimeline from "./components/AnimatedTimeline";
 import { ShineBorder } from "./components/ShineBorder";
-import Tourist from "./components/Tourist";
+
 import MockupContainer from "./components/MockupContainer";
 import BackToTopButton from "./components/BackToTopbutton";
-
+import TechStack from "./components/TeachStack";
 function App() {
   return (
     <div>
@@ -28,9 +28,7 @@ function App() {
         </div>
 
         <div className="flex w-full flex-col">
-          <Tourist />
-          <div className="divider"></div>
-          <Guide />
+          <TechStack />
         </div>
 
         <Footer />
