@@ -4,7 +4,7 @@ import Guide from "./components/Guide";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 
-import PhoneMockUp2 from "./components/PhoneMockUp2";
+import AnimatedTimeline from "./components/AnimatedTimeline";
 import { ShineBorder } from "./components/ShineBorder";
 import Tourist from "./components/Tourist";
 import MockupContainer from "./components/MockupContainer";
@@ -24,7 +24,7 @@ function App() {
         </div>
 
         <div className="container mx-auto px-4">
-          <PhoneMockUp2 />
+          <AnimatedTimeline />
         </div>
 
         <div className="flex w-full flex-col">
