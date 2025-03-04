@@ -134,10 +134,10 @@ const MockupContainer: React.FC = () => {
       <div className="text-center mb-6 max-w-4xl mx-auto px-4">
         <h1 className="text-white text-3xl md:text-6xl lg:text-7xl font-bold mb-4">
           Hey, We're{" "}
-          <span className="relative inline-block">
-            Team name
+          <span className="inline-block">
+            Team Shark
             <span className="absolute -bottom-2 left-0 w-full h-3 bg-blue-500 -z-10"></span>
-            <span className="text-blue-500">!</span>
+           
           </span>
         </h1>
         <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold mb-8">
