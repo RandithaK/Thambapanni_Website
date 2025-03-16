@@ -30,10 +30,10 @@ function App() {
         <div className="flex w-full flex-col">
           <TechStack />
         </div>
-
+        </ShineBorder>
         <Footer />
         
-      </ShineBorder>
+     
     </div>
   );
 }
