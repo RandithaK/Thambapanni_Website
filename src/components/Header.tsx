@@ -1,5 +1,4 @@
 import React from "react";
-import { repositories } from "../siteConfig";
 import thambapanniLogo from "../assets/Thambapanni.png";
 
 interface NavItem {
@@ -9,15 +8,12 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Features", href: "#" },
-  { label: "Tourists", href: "#tourist" },
-  { label: "Guides", href: "#guides" },
   {
     label: "Our Codebases",
     children: [
-      { label: "FrontEnd", href: repositories.frontend },
-      { label: "BackEnd", href: repositories.backend },
-      { label: "WebPage", href: repositories.website },
+      { label: "FrontEnd", href: "https://github.com/nethmalgunawardhana/Thambapanni" },
+      { label: "BackEnd", href: "https://github.com/nethmalgunawardhana/Thambapanni_backend"  },
+      { label: "WebPage", href: "https://github.com/RandithaK/Thambapanni_Website" },
     ],
   },
 ];
@@ -35,13 +31,13 @@ const NavLinks: React.FC<{ items: NavItem[]; className?: string }> = ({
             <ul className="p-2 glass rounded-box">
               {item.children.map((child, childIndex) => (
                 <li key={childIndex}>
-                  <a href={child.href}>{child.label}</a>
+                  <a href={child.href} target="_blank" rel="noopener noreferrer">{child.label}</a>
                 </li>
               ))}
             </ul>
           </details>
         ) : (
-          <a href={item.href}>{item.label}</a>
+          <a href={item.href} target="_blank" rel="noopener noreferrer" >{item.label}</a>
         )}
       </li>
     ))}
@@ -53,8 +49,8 @@ const Header: React.FC = () => {
     <div className="fixed top-0 left-0 right-0 z-50">
       <div className="navbar glass shadow-sm ">
         <div className="navbar-start">
-          
-            <a className="btn btn-ghost bg-transparent text-2xl flex items-center gap-2">
+
+            <a href="/" className="btn btn-ghost bg-transparent text-2xl flex items-center gap-2"> 
             <img
               src={thambapanniLogo}
               alt="Thambapanni Logo"
@@ -62,6 +58,7 @@ const Header: React.FC = () => {
             />
             Thambapanni
             </a>
+
 
           <div className="dropdown ">
             <div tabIndex={0} role="button" className="btn btn-ghost  lg:hidden">
@@ -85,7 +82,7 @@ const Header: React.FC = () => {
               className="menu menu-sm dropdown-content glass rounded-box z-1 mt-3 w-52 p-2 shadow"
             />
           </div>
-        </div> 
+        </div>
         <div className="navbar-end hidden lg:flex mr-4">
       <NavLinks
         items={navItems}
