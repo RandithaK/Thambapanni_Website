@@ -51,7 +51,7 @@ const NavLinks: React.FC<{ items: NavItem[]; className?: string }> = ({
 const Header: React.FC = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-50">
-      <div className="navbar glass shadow-sm">
+      <div className="navbar glass shadow-sm ">
         <div className="navbar-start">
           
             <a className="btn btn-ghost bg-transparent text-2xl flex items-center gap-2">
@@ -63,8 +63,8 @@ const Header: React.FC = () => {
             Thambapanni
             </a>
 
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div className="dropdown ">
+            <div tabIndex={0} role="button" className="btn btn-ghost  lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -85,13 +85,13 @@ const Header: React.FC = () => {
               className="menu menu-sm dropdown-content glass rounded-box z-1 mt-3 w-52 p-2 shadow"
             />
           </div>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <NavLinks
-            items={navItems}
-            className="menu menu-horizontal px-1 text-lg"
-          />
-        </div>
+        </div> 
+        <div className="navbar-end hidden lg:flex mr-4">
+      <NavLinks
+        items={navItems}
+        className="menu menu-horizontal  px-1 text-lg"
+      />
+      </div>
       </div>
     </div>
   );
