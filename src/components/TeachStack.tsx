@@ -7,8 +7,10 @@ const technologies = [
   { name: 'JWT Authentication', icon: './icons/icon5.png', description: 'Secure identity management' },
   { name: 'Google Gemini API', icon: './icons/icon6.webp', description: 'AI-powered trip planning' },
   { name: 'Stripe', icon: './icons/icon7.webp', description: 'Secure payment processing' },
-  { name: 'SendGrid', icon: './icons/icon9.jpg', description: 'Transactional email service' },
-  { name: 'OpenStreetMap', icon: './icons/icon10.png', description: 'Detailed Sri Lanka navigation' }
+  { name: 'SendGrid', icon: './icons/icon10.png', description: 'Transactional email service' },
+  { name: 'OpenStreetMap', icon: './icons/icon9.jpg', description: 'Detailed Sri Lanka navigation' },
+  { name: 'Unsplash', icon: './icons/icon11.png', description: 'Trip destination images' },
+  { name: 'ImageKit.io', icon: './icons/icon12.jpg', description: 'Guide license & destination image storage' }
 ];
 
 const TechStack = () => {
