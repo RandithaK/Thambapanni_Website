@@ -157,18 +157,19 @@ const MockupContainer: React.FC = () => {
             className="w-full h-full"
           />
           
-          {/* Linear Gradient overlay */}
-          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
-          
-          {/* Radial Gradient mask */}
-          <div className="absolute inset-0 w-full h-full [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
-        </div>
+       {/* Linear Gradient overlay */}
+      <div className="absolute inset-x-4 md:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-[85%] md:w-3/4 blur-sm" />
+      <div className="absolute inset-x-4 md:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-[85%] md:w-3/4" />
+      <div className="absolute inset-x-10 md:inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-[60%] md:w-1/4 blur-sm" />
+      <div className="absolute inset-x-10 md:inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-[60%] md:w-1/4" />
+
+      {/* Radial Gradient mask */}
+      <div className="absolute inset-0 w-full h-full [mask-image:radial-gradient(200px_150px_at_top,transparent_20%,white)] md:[mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+      </div>
+      
       </div>
 
-      {/* Phone mockups container - properly centered and responsive */}
+      {/* Phone mockups container  */}
       <div
         className={`relative w-full max-w-6xl h-[400px] md:h-[600px] mx-auto flex items-center justify-center ${isMobile ? "pr-45" : "pr-60"}`}
       >
