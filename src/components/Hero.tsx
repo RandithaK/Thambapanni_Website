@@ -10,7 +10,7 @@ const Hero = () => {
   }, []);
 
   const handleOnClick = () => {
-    window.open("https://drive.google.com/your-app-download-link", "_blank");
+    window.open("https://drive.google.com/file/d/12yCtQuz3dzM6cL7hZtgLyPNF3yTlOK_M/view", "_blank");
   };
 
   return (
