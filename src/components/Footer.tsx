@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import applogo from "../assets/Thambapanni.png";
 
 // Define repositories and app links directly in this file
